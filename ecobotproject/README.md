@@ -100,7 +100,7 @@ Here’s the **fixed README section** with correct Markdown formatting:
 ### 1. Clone the repository
 ```bash
 git clone https://github.com/likithreddyn/Eco-Bot-Smart-Navigation-System
-cd ecobot
+cd ecobotproject
 ```
 
 ### 2. Create a virtual environment & install dependencies
@@ -125,4 +125,5 @@ OPENAI_API_KEY=your_openai_key
 ```bash
 python app.py
 ```
+
 
