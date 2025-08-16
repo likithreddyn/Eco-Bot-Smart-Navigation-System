@@ -1,10 +1,9 @@
 
 # 🌍 EcoBot – AI-Powered AQI-Based Navigation Assistant
 
-EcoBot is an **AI-powered chatbot navigation system** designed to revolutionize travel with eco-conscious route planning.  
-By combining **Google Maps API** for route suggestions and **AQICN API** for real-time Air Quality Index (AQI) monitoring,  
-EcoBot recommends the cleanest possible travel routes, encourages sustainable transportation choices,  
-and rewards users with **Carbon Coins** for eco-friendly behavior.
+An eco-conscious navigation system that analyzes **Air Quality Index (AQI)** data along all possible routes between the same start and end points.
+Instead of always suggesting the **fastest** and **shortest path**, the system **distributes traffic intelligently to avoid pollution build-up in a single area, helping maintain balanced AQI levels across regions**.
+Built with a Flask backend and HTML/CSS/JavaScript frontend, it also features a chatbot interface and rewards users with Carbon Coins for sustainable choices.
 
 ---
 
@@ -23,15 +22,18 @@ EcoBot addresses this challenge by integrating **real-time AQI data** into route
 - **Step 1:** User inputs **origin** and **destination** via chatbot interface.  
 - **Step 2:** Google Maps API fetches multiple route options.  
 - **Step 3:** AQICN API analyzes AQI levels along each route.  
-- **Step 4:** it recommends the **cleanest route** with AQI score and transport advice.  
+- **Step 4:** Instead of only suggesting the fastest or shortest path, EcoBot **distributes traffic by recommending routes that help balance AQI levels across regions**, preventing excessive pollution concentration in one area.  
 - **Step 5:** Users earn **Carbon Coins** for choosing sustainable transport, redeemable for rewards.
 
 ---
 
 ## ✨ Key Features
 
-- **🌱 Real-Time AQI-Based Route Optimization**  
-  Selects travel routes with the lowest pollution exposure.
+- **AQI-Based Traffic Balancing:**
+  Routes selected not only by AQI but also to reduce over-concentration of vehicles.
+
+- **Dynamic Route Analysis:**
+  Uses live AQI APIs to monitor and compare air quality across alternative routes.
 
 - **🚲 Eco-Friendly Transport Recommendations**  
   - 🚗 Car/Bike for low AQI  
@@ -39,10 +41,10 @@ EcoBot addresses this challenge by integrating **real-time AQI data** into route
   - 🚌 Public transport for high AQI  
   - 😷 Mask alerts for hazardous conditions  
 
-- **💰 Carbon Coin Rewards System**  
+- **💰 Carbon Coin Rewards System:**
   Earn coins for eco-conscious travel, redeemable via partner businesses.
 
-- **🤖 AI Chatbot Assistance**  
+- **🤖 AI Chatbot Assistance:**
   Built with **Flask + OpenAI API** for natural user interaction.
 
 ---
@@ -63,13 +65,15 @@ EcoBot addresses this challenge by integrating **real-time AQI data** into route
 1. **User**: Inputs "From" and "To" locations in chatbot.  
 2. **System**: Fetches coordinates via Google Maps API.  
 3. **System**: Retrieves AQI values for routes using AQICN API.  
-4. **System**: Calculates cleanest route & suggests transport mode.  
+4. **System**: Analyzes cumulative AQI levels and recommends a route that helps **balance pollution by distributing traffic**, rather than just choosing the fastest or shortest path & suggests transport mode.  
 5. **System**: Displays Google Maps link, AQI score, transport suggestion, and Carbon Coins earned.  
 
 ---
 
 ## 📈 Impact
-
+- Prevents **localized pollution spikes by distributing traffic flow**.
+- Promotes **long-term urban air quality management**.
+- Engages commuters through **chatbot guidance + gamified rewards**.
 - Promotes **eco-friendly transportation choices** to reduce emissions.  
 - Encourages **public transport usage** to improve public health.  
 - Raises awareness about **air quality** and personal exposure risks.  
@@ -78,7 +82,7 @@ EcoBot addresses this challenge by integrating **real-time AQI data** into route
 
 ## 🔮 Future Development
 
-- Integrate **real-time traffic** and **weather data**.  
+- Integrate **weather data**.  
 - Partner with local businesses for **reward redemption**.  
 - Expand to **global cities** with localized AQI and transport data.  
 
@@ -121,3 +125,4 @@ OPENAI_API_KEY=your_openai_key
 ```bash
 python app.py
 ```
+
